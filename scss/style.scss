@@ -1,0 +1,53 @@
+@import "reset.scss";
+@import "typography.scss";
+@import "nav.scss";
+@import "header.scss";
+@import "main.scss";
+@import "form.scss";
+@import "grid.scss";
+@import "footer.scss";
+ 
+/****************************************
+STRUCTURES
+*****************************************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;         
+}
+
+body {
+  overflow-x:hidden;
+  font-family: 'Quantico', sans-serif;
+}
+
+.wrapper {
+	overflow: visible;
+}
+
+section {
+	position: relative;
+	text-align: center;
+
+
+}
+
+article{
+	position: relative;
+	border-top-color: #d2ccda;
+	border-bottom-color: #d2ccda;
+
+}
+
+
+.row {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0 auto;
+	zoom: 1;
+}
+
+footer {
+	width: 100%;
+	background-color: #a4a2a6;
+}

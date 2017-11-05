@@ -1,0 +1,52 @@
+$formColor: #ef4b74;
+$roundedBorder: 5px;
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clr {clear:both;
+}
+
+form {
+    padding: 1.5em;
+    width: 100%;
+    border: 1px solid $formColor;
+    border-radius: $roundedBorder;
+    
+    input{
+        font-family: inherit;
+    }
+    label{
+        color:$formColor;
+    }
+}
+
+input, textarea {outline:none;}
+
+
+input[type='text'] {
+    resize: none;
+    border-radius: $roundedBorder;
+    margin:.5em 0 1em;
+    padding: 0 1em;
+    width:100%;
+  }
+
+  textarea {
+    resize: none;
+    font-size:1em;
+    height:8.5em;
+    margin:.5em 0 1em;
+    padding: 0 1em;
+    width:100%;
+    border-radius: $roundedBorder;
+  }
+
+  input[type='submit'] {
+    cursor:pointer;
+    float:right;
+    background-color: $formColor;
+    color: white;
+    border-radius: $roundedBorder;
+    font-size:1.2em;
+    width: 100%;
+  }
+  input[type='submit']:hover {background-color:rgba(239, 75, 116, 0.72);}

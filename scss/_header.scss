@@ -1,0 +1,51 @@
+@mixin breakpoint($point) {
+    @if $point == 1300 {
+      @media (max-width: 1300px) { @content; }
+    }
+    @else if $point == 715 {
+      @media (max-width: 715px) { @content; }
+    }
+  }
+
+header{
+	display: inline-flex;
+	background: #4d1ba8;
+	width: 100%;
+	padding: 0 90px;
+}
+
+.header-float {
+    top: 0;
+    z-index: 210;
+    max-width: 100%;
+    width: 100%;
+    border-bottom: 0;
+}
+
+.header-content {
+    height: 100px;
+    overflow: visible;
+    top: 0px;
+    width: 100%;
+}
+
+.logo{
+    position: absolute;
+    width: 250px;
+    display: block;
+    float: left;
+    padding: 10px;
+    max-width: 100%;
+    zoom: 1;
+}
+
+.menu {
+    float: right;
+    position: relative;
+    z-index: 200;
+
+        @include breakpoint(715) {
+        position: relative;
+        width: 100%;
+        }
+}

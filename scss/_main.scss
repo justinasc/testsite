@@ -1,0 +1,63 @@
+@mixin clearfix() {
+  &:after {
+    display: table;
+    content: ' ';
+    clear: both;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == 1300 {
+    @media (max-width: 1300px) { @content; }
+  }
+  @else if $point == 715 {
+    @media (max-width: 715px) { @content; }
+  }
+}
+
+.main-content {
+  @include clearfix;
+  padding: 35px 100px 0 100px;
+
+  @include breakpoint(715) {
+    padding: 0 15px;
+    }
+  
+  > div:nth-child(1) {
+    background: white;
+      
+    @media (min-width: 600px) {
+      float: left; 
+      width: 70%;
+      padding: 10px 20px;
+      border: 1px solid #d2ccda;
+    }
+  }
+
+  > div:nth-child(2) {
+
+    @media (min-width: 600px) {
+      float: right; 
+      width: 30%;
+    }
+  }
+  
+  > div {
+    padding: 0 1.5em 1.5em 1.5em;
+  }
+}
+
+
+.sidebar-text{
+  h4{
+    text-align: center;
+		padding: 0 0 0.5em 0;
+		margin: 0;
+		font-size: 27px;
+		border-bottom: 1px solid black;
+  }
+  
+  section{
+    padding: 1em 0 1em 0;
+  }
+}
